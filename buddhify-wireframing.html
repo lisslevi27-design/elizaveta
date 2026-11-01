@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buddhify wireframing - Portfolio Designer</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.jpg">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+  /* Stile diretto per il box e il pulsante di download */
+  .project-download-section {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+  .project-download-section .download-card {
+    background: #fafafa;
+    border: 1px solid #eeeeee;
+    border-left: 4px solid #e7739a;
+    border-radius: 8px;
+    padding: 2.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .project-download-section .download-info {
+    flex: 1;
+    min-width: 280px;
+  }
+  .project-download-section .download-info h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 0.5rem;
+  }
+  .project-download-section .download-info p {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .project-download-section .btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: #e7739a;
+    color: #ffffff;
+    padding: 0.9rem 1.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(231, 115, 154, 0.25);
+  }
+  .project-download-section .btn-download:hover {
+    background-color: #d65c85;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(231, 115, 154, 0.35);
+  }
+</style>
+</head>
+
+<body>
+
+  <!-- Navbar Comune -->
+  <header class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="assets/img/logo.svg" alt="Logo Portfolio" style="height: 65px; width: auto; display: block; max-height: none;"> 
+        </a> 
+        <nav class="nav-links">
+            <a href="cv.html">CV</a>
+            <a href="contatti.html">CONTATTI</a>
+        </nav>
+    </div>
+</header>
+
+  <!-- Contenuto Pagina Progetto -->
+  <main class="project-detail">
+    <div class="container">
+      
+      <!-- Link Torna Indietro -->
+      <a href="index.html#progetti" class="back-link">← TORNA AI PROGETTI</a>
+
+      <!-- Hero del Progetto: Titolo a sinistra e Metadata a destra -->
+      <div class="project-hero-grid">
+        <div class="project-title-area">
+          <h1>BUDDHIFY<br><span class="highlight">WIREFRAMING</span></h1>
+          <p class="project-subtitle">Evoluzione dell'interfaccia digitale e progettazione di wireframe mid-fidelity per tradurre la complessità del layout in un'esperienza utente fluida, accessibile e priva di barriere.</p>
+        </div>
+        
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">TIPOLOGIA</span>
+            <span class="meta-value">UI Design</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">ANNO</span>
+            <span class="meta-value">2026</span>
+          </div>
+          <div class="meta-item full-width">
+            <span class="meta-label">STRUMENTI</span>
+            <span class="meta-value">Figma, Mid-Fidelity Wireframes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Immagine Principale in Evidenza -->
+      <div class="project-main-image">
+        <img src="assets/img/Buddhify wireframe.png" alt="Buddhify Wireframe">
+      </div>
+
+      <!-- Sezione Panoramica (Problema / Soluzione) -->
+      <section class="project-section">
+        <h2 class="section-title-line">PANORAMICA</h2>
+        <div class="panoramica-grid">
+          <div class="panoramica-card">
+            <h3>IL PROBLEMA</h3>
+            <p>Le aree di miglioramento emerse durante la fase di Discovery e di audit dell'accessibilità evidenziavano limiti strutturali nell'interfaccia originaria di Buddhify. Tra le criticità principali spiccavano la difficoltà nel navigare contenuti lunghi senza riferimenti spaziali, la perdita della barra di navigazione durante lo scroll profondo, l'incertezza sul modello di prezzo nella sezione Hero, frizioni nella selezione delle categorie tramite la ruota su schermi piccoli e l'assenza di strumenti di supporto per il salvataggio dei contenuti preferiti o la gestione dell'ansia da pagamento.</p>
+          </div>
+          <div class="panoramica-card">
+            <h3>LA SOLUZIONE</h3>
+            <p>Un completo processo di redesign e strutturazione di wireframe mid-fidelity focalizzato sull'abbattimento delle barriere visive e motorie. Il progetto ha introdotto soluzioni mirate per ogni pagina chiave del sito: un'architettura trasparente con chiarezza di prezzo fin dalla Hero, touch target ottimizzati a un minimo di 44x44 pixel, l'introduzione di un pulsante "Torna su" (Anchor Button) persistente, una barra di navigazione fissa (Sticky Navigation), l'integrazione di una funzione Wishlist/Preferiti per le meditazioni, e un layout pulito strutturato in paragrafi brevi e liste puntate per ridurre il carico cognitivo.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sezione Download Risorsa / Progetto -->
+<section class="project-download-section">
+  <div class="download-card">
+    <div class="download-info">
+      <h3>Vuoi consultare la presentazione completa?</h3>
+      <p>Scarica il PDF della documentazione completa di Buddhify, con i wireframe mid-fidelity,<br> i wireflow di navigazione e l'alberatura dell'Information Architecture.</p>
+    </div>
+    <a href="assets/img/PDFwireframe.pdf" class="btn-download" target="_blank" download>
+      <i class="fas fa-file-pdf"></i> Scarica il PDF
+    </a>
+  </div>
+</section>
+
+    </div>
+  </main>
+
+  <!-- Footer Comune -->
+   <footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <p>&copy; 2026 Portfolio Designer</p>
+      <p class="footer-subtitle">Progettato con cura per esperienze utente uniche.</p>
+    </div>
+    
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/elizavetacontil" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      <a href="https://github.com/lisslevi27-design" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.instagram.com/_eli_zavet27?vrfl=MXU3d2oxdzdpNnNm&utm_source=qr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
