@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Elizaveta</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.jpg">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+<style>
+  /* --- EFFETTO HOVER ROSA GLOBALE --- */
+  a {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  header nav a:hover,
+  footer a:hover,
+  section:nth-of-type(1) > div:nth-child(1) > div a:last-child:hover {
+    color: #e91e63 !important;
+  }
+
+  footer a:hover i {
+    color: #e91e63 !important;
+  }
+
+  section:nth-of-type(1) > div:nth-child(1) > div a:first-child:hover {
+    background-color: #e91e63 !important;
+    color: #ffffff !important;
+    border-color: #e91e63 !important;
+  }
+
+  section:nth-of-type(3) a:hover {
+    background-color: #e91e63 !important;
+    color: #ffffff !important;
+    border-color: #e91e63 !important;
+  }
+
+  /* --- REGOLE RESPONSIVE MOBILE --- */
+  @media (max-width: 768px) {
+    
+    /* 1. HEADER E NAVBAR */
+    header {
+      padding: 1rem !important;
+    }
+
+    header > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+    }
+
+    header img {
+      height: 32px;
+      width: auto;
+      display: block;
+    }
+
+    header nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    /* 2. SEZIONE HERO */
+    section:nth-of-type(1) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 1rem;
+      gap: 2.5rem;
+    }
+
+    section:nth-of-type(1) > div:nth-child(2) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    section:nth-of-type(1) > div:nth-child(2) img {
+      width: 100% !important;
+      max-width: 420px !important;
+      height: auto !important;
+      border-radius: 16px;
+      display: block;
+    }
+
+    section:nth-of-type(1) > div:nth-child(1) {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 0.5rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    section:nth-of-type(1) h1 {
+      font-size: 1.7rem;
+      line-height: 1.3;
+      margin-bottom: 1.2rem;
+      width: 100%;
+    }
+
+    section:nth-of-type(1) p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      max-width: 100%;
+      padding: 0 0.2rem;
+    }
+
+    section:nth-of-type(1) p br {
+      display: none;
+    }
+
+    section:nth-of-type(1) > div:nth-child(1) > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+    }
+
+    section:nth-of-type(1) > div:nth-child(1) > div a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+
+    section:nth-of-type(1) > div:nth-child(1) > div a:first-child {
+      width: 100%;
+      max-width: 320px;
+      padding: 1rem 1.5rem;
+      border: 2px solid #e91e63;
+      border-radius: 8px;
+      color: #e91e63;
+      background-color: transparent;
+    }
+
+    section:nth-of-type(1) > div:nth-child(1) > div a:last-child {
+      width: auto;
+      padding: 0.5rem 1rem;
+      border: none;
+      color: #333;
+      background-color: transparent;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    /* 3. SEZIONE PROGETTI (Immagini non tagliate) */
+    section:nth-of-type(2) {
+      padding: 2.5rem 1rem;
+    }
+
+    section:nth-of-type(2) > div {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    section:nth-of-type(2) > div > a {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: auto; /* Lascia che il box si adatti al contenuto senza forzature eccessive */
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    /* Adattamento perfetto dell'immagine della card */
+    section:nth-of-type(2) > div > a img {
+      width: 100% !important;
+      height: auto !important; /* Mantiene le proporzioni originali senza tagliare nulla */
+      max-height: 260px; /* Evita che diventi troppo alta */
+      object-fit: contain !important; /* Mostra l'intera immagine intera anziché tagliarla */
+      background-color: #fcfcfc; /* Sfondo leggero opzionale dietro l'immagine se ha proporzioni particolari */
+      display: block;
+    }
+
+    /* 4. SEZIONE CONTATTI */
+    section:nth-of-type(3) {
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+
+    section:nth-of-type(3) > div:last-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    /* 5. FOOTER */
+    footer {
+      padding: 3rem 1rem;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    footer > div {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    footer > div > div:first-child {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    footer > div > div:last-child {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+    }
+
+    footer > div > div:last-child a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: #333;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    footer > div > div:last-child a i {
+      font-size: 1.2rem;
+      color: #e91e63;
+    }
+  }
+</style>
+
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo-link">
+            <img src="assets/img/logo.svg" alt="Logo Portfolio" style="height: 44px; width: auto; display: block; max-height: none;"> 
+        </a> 
+        <nav class="nav-links">
+            <a href="cv.html">CV</a>
+            <a href="contatti.html">CONTATTI</a>
+        </nav>
+    </div>
+</header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Sono Elizaveta,<br>creo esperienze <br><em><span>UX/UI</span></em></h1>
+            <p>In fase di formazione specializzata come professionista UX/UI,<br> traduco la mia passione per il design in progetti tangibili.<br> Il mio background include lo sviluppo di esperienze per diverse tematiche,<br> combinando competenze <strong>UX Research, UI Interface, Grafica, e Copywriter</strong>.</p>
+            <div class="hero-buttons">
+                <a href="#progetti" class="btn-primary">VEDI PROGETTI</a>
+                <a href="#contatti" class="btn-secondary">LAVORIAMO INSIEME</a>
+            </div>
+        </div>
+        <div class="hero-image">
+             <img src="assets/img/profilo.jpg" alt="Elizaveta">
+        </div>
+    </section>
+
+    <!-- SEZIONE PROGETTI -->
+    <section id="progetti" class="projects">
+        <span class="section-tag">PORTFOLIO</span>
+        <h2>PROGETTI</h2>
+
+        <div class="projects-grid">
+           
+             <!-- PROGETTO 1 -->
+<a href="yoyo-articolo.html" class="project-card">
+    <img src="assets/img/copywriting.png" alt="Yoyo App">
+    <div class="project-card-info">
+        <div class="project-header">
+            <h3>Yoyo App - Articolo</h3>
+            <span class="year">2026</span>
+        </div>
+         <span class="tag">COPYWRITING & EDITORIAL</span>
+        <p>Analisi strategica del tono di voce, microcopy e copywriting per il web, orientato a migliorare l'engagement dell'utente e la chiarezza dei contenuti digitali.</p>
+    </div>
+</a>
+
+<!-- PROGETTO 2 -->
+<a href="orizon-brand-identity.html" class="project-card">
+    <img src="assets/img/grafica.png" alt="Orizon">
+    <div class="project-card-info">
+        <div class="project-header">
+            <h3>Orizon - Brand Identity</h3>
+            <span class="year">2025</span>
+        </div>
+        <span class="tag">GRAPHIC DESIGNER</span>
+        <p>Studio dell'identità visiva, composizione tipografica e palette cromatica, sviluppati per creare una comunicazione di brand coerente, moderna ed impattante.</p>
+    </div>
+</a>
+
+             
+
+            <!-- PROGETTO 3 -->
+            <a href="buddhify-discovery.html" class="project-card">
+    <img src="assets/img/discovery.png" alt="Buddhify Discovery">
+    <div class="project-card-info">
+        <div class="project-header">
+            <h3>Buddhify - Discovery</h3>
+            <span class="year">2026</span>
+        </div>
+        <span class="tag">UX RESEARCH</span>
+        <p>Un'approfondita  indagine di user research e analisi dei bisogni degli utenti di Buddhify, per definire il bisogno di redesign.</p>
+    </div>
+</a>
+           
+
+<!-- PROGETTO 4 -->
+<a href="buddhify-accessibility.html" class="project-card">
+    <img src="assets/img/accessibility.png" alt="Buddhify Accessibility">
+    <div class="project-card-info">
+        <div class="project-header">
+            <h3>Buddhify - Accessibility</h3>
+            <span class="year">2026</span>
+        </div>
+        <span class="tag">UX RESEARCH</span>
+        <p>Un'analisi profonda del sito centrata sull'inclusività e l'esperienza dell'utente rispettando le WCAG.</p>
+    </div>
+</a>
+
+        <!-- PROGETTO 5 -->
+<a href="buddhify-wireframing.html" class="project-card">
+    <img src="assets/img/wireframing.png" alt="Buddhify Wireframing">
+    <div class="project-card-info">
+        <div class="project-header">
+            <h3>Buddhify - Wireframing</h3>
+            <span class="year">2026</span>
+        </div>
+        <span class="tag">UX/UI DESIGN</span>
+        <p>Studio e riproduzione delle scelte progettuali sulla realizzazione del wireframe per il nuovo redesign del sito.</p>
+    </div>
+</a>
+            
+<!-- PROGETTO 6 -->
+<a href="buddhify-redesign.html" class="project-card">
+    <img src="assets/img/redesign.png" alt="Buddhify Redesign">
+    <div class="project-card-info">
+        <div class="project-header">
+            <h3>Buddhify - Redesign</h3>
+            <span class="year">2026</span>
+        </div>
+        <span class="tag">UI DESIGN</span>
+        <p>Redesign accessibile focalizzato sull'esperienza utente, con wireframe, architettura delle informazioni e prototipo interattivo sviluppato su Figma rispettando le linee guida WCAG.</p>
+    </div>
+</a>
+
+           
+           
+             
+        </div>
+    </section>
+
+    <!-- SEZIONE CONTATTI -->
+    <section class="contact" id="contatti">
+  <div class="section-tag">Contatti</div>
+  <h2>HAI UN'IDEA FANTASTICA?</h2>
+  
+  <p class="contact-subtitle">
+    CREIAMO QUALCOSA DI<br> <span class="highlight">STRAORDINARIO</span> INSIEME.
+  </p>
+
+  <div class="contact-action">
+    <!-- Pulsante Contattami Ora -->
+    <a href="contatti.html" class="btn-primary">CONTATTAMI ORA</a>
+
+    <!-- Box Email Diretta con linea verticale -->
+    <div class="direct-email-box">
+      <span class="email-label">EMAIL DIRETTA</span>
+      <span class="email-address">liss.levi27@gmail.com</span>
+    </div>
+  </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <p>&copy; 2026 Portfolio Designer</p>
+      <p class="footer-subtitle">Progettato con cura per esperienze utente uniche.</p>
+    </div>
+    
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/elizavetacontil" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      <a href="https://github.com/lisslevi27-design" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.instagram.com/_eli_zavet27?vrfl=MXU3d2oxdzdpNnNm&utm_source=qr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

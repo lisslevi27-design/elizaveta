@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti - Elizaveta Conti Levitskaya</title>
+   <link rel="icon" type="image/png" href="assets/img/favicon.jpg">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stile dedicato per la pagina Contatti -->
+  <style>
+    :root {
+      --primary-pink: #e7739a;
+      --primary-dark: #111111;
+      --text-gray: #666666;
+      --light-gray: #fcfcfc;
+      --border-color: #dddddd;
+    }
+
+    body {
+      background-color: var(--light-gray);
+      color: var(--primary-dark);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* Container principale Contatti */
+    .contact-wrapper {
+      flex: 1;
+      max-width: 640px;
+      margin: 4rem auto 6rem;
+      padding: 0 1.5rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Intestazione Sezione */
+    .contact-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .contact-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0 0 0.8rem 0;
+      color: var(--primary-dark);
+    }
+
+    .contact-line {
+      width: 40px;
+      height: 3px;
+      background-color: var(--primary-pink);
+      margin: 0 auto 1rem auto;
+      border-radius: 2px;
+    }
+
+    .contact-subtitle {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-gray);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Form Contatti */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--primary-dark);
+      text-transform: uppercase;
+    }
+
+    .form-control {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.6rem 0;
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-bottom-color: var(--primary-pink);
+    }
+
+    .form-control::placeholder {
+      color: #bbbbbb;
+    }
+
+    textarea.form-control {
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 0.8rem;
+      resize: vertical;
+      min-height: 140px;
+    }
+
+    textarea.form-control:focus {
+      border-color: var(--primary-pink);
+    }
+
+    /* Bottone Invio */
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background-color: var(--primary-pink);
+      color: #ffffff;
+      border: none;
+      padding: 0.9rem 2rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      align-self: flex-start;
+      box-shadow: 0 4px 12px rgba(231, 115, 154, 0.25);
+    }
+
+    .btn-submit:hover {
+      background-color: #d65c85;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(231, 115, 154, 0.35);
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .contact-title {
+        font-size: 2rem;
+      }
+      .btn-submit {
+        width: 100%;
+      }
+
+
+      header {
+      padding: 1rem !important;
+    }
+
+    header > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+    }
+
+    header img {
+      height: 32px;
+      width: auto;
+      display: block;
+    }
+
+    header nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+     /* 5. FOOTER */
+    footer {
+      padding: 3rem 1rem;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    footer > div {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    footer > div > div:first-child {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    footer > div > div:last-child {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+    }
+
+    footer > div > div:last-child a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: #333;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    footer > div > div:last-child a i {
+      font-size: 1.2rem;
+      color: #e91e63;
+    }
+
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR PRINCIPALE (con Logo che torna alla Home) -->
+  <header class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="assets/img/logo.svg" alt="Logo Portfolio" style="height: 65px; width: auto; display: block; max-height: none;"> 
+        </a> 
+        <nav class="nav-links">
+            <a href="cv.html">CV</a>
+            <a href="contatti.html">CONTATTI</a>
+        </nav>
+    </div>
+</header>
+
+  <!-- CONTENUTO PAGINA CONTATTI -->
+  <main class="contact-wrapper">
+    
+    <div class="contact-header">
+      <h1 class="contact-title">Contatti</h1>
+      <div class="contact-line"></div>
+      <p class="contact-subtitle">Hai un progetto in mente o vuoi semplicemente fare due chiacchiere?<br> Scrivimi pure.</p>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/xeagjqqz" method="POST">
+      
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" class="form-control" placeholder="Il tuo nome completo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="la-tua@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" name="messaggio" class="form-control" placeholder="Come posso aiutarti?" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">
+        Invia messaggio <i class="fas fa-paper-plane"></i>
+      </button>
+
+    </form>
+
+  </main>
+
+  <!-- FOOTER -->
+ <footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <p>&copy; 2026 Portfolio Designer</p>
+      <p class="footer-subtitle">Progettato con cura per esperienze utente uniche.</p>
+    </div>
+    
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/elizavetacontil" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      <a href="https://github.com/lisslevi27-design" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.instagram.com/_eli_zavet27?vrfl=MXU3d2oxdzdpNnNm&utm_source=qr" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
